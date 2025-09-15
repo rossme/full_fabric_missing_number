@@ -28,6 +28,8 @@ end
 private
 
 def first_missing_number(arr)
+  return 1 if arr.none? { |x| x == 1 }
+
   max_val = arr.max
   (1..max_val).sum - arr.sum
 end

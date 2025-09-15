@@ -49,4 +49,12 @@ describe "find_missing_number" do
       expect(find_missing_number([2, 3, 4, 6], nth: 23)).to eq(27)
     end
   end
+
+  context "when the array is missing numbers at the beginning" do
+    it "returns the correct missing number" do
+      expect(find_missing_number([2, 3, 4, 5, 23])).to eq(1)
+      expect(find_missing_number([3, 4, 5, 23, 57], nth: 48)).to eq(52)
+      expect(find_missing_number([3, 4, 5], nth: 3)).to eq(6)
+    end
+  end
 end

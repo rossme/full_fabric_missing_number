@@ -13,23 +13,32 @@
 #
 require "set"
 
-def find_missing_number(arr, nth: 1)
-  return nil if arr.empty? || nth < 1
+DEFAULT_NTH = 1
 
-  arr_max = arr.max
+def find_missing_number(arr, nth: DEFAULT_NTH)
+  return nil if arr.empty?
 
   if nth == 1
-    return (1..arr_max).sum - arr.sum
+    first_missing_number(arr)
+  else
+    nth_missing_number(arr, nth)
   end
+end
 
+private
+
+def first_missing_number(arr)
+  max_val = arr.max
+  (1..max_val).sum - arr.sum
+end
+
+def nth_missing_number(arr, nth)
   set = arr.to_set
-
+  max_val = arr.max
   current = 1
   missing_count = 0
 
   while missing_count < nth
-    return nil if nth > arr.size + 1 && current > arr_max
-
     unless set.include?(current)
       missing_count += 1
       return current if missing_count == nth

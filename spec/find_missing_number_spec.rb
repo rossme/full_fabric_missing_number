@@ -36,16 +36,16 @@ describe "find_missing_number" do
     end
   end
 
-  context "when nth is less than 1" do
+  context "when nth is 0 or a negative integer" do
     it "returns nil" do
       expect(find_missing_number([1, 2, 3], nth: 0)).to be_nil
       expect(find_missing_number([1, 2, 3], nth: -1)).to be_nil
     end
   end
 
-  context "when nth is outside the range of missing numbers" do
-    it "returns nil when there are not enough missing numbers" do
-      expect(find_missing_number([1, 2, 3], nth: 12)).to be_nil
+  context "when nth exceeds the number of missing numbers within the array range" do
+    it "returns the nth missing number beyond the current array" do
+      expect(find_missing_number([1, 2, 3], nth: 12)).to eq(15)
     end
   end
 end

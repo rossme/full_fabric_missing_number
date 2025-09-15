@@ -33,6 +33,8 @@ To benchmark the performance, execute the following command in the console:
   ruby benchmark/find_missing_number_benchmark.rb
 ````
 
+<img width="794" height="92" alt="Screenshot 2025-09-15 at 22 40 58" src="https://github.com/user-attachments/assets/b103f357-6845-44de-ab31-f8b32497e446" />
+
 
 ### Examples
 

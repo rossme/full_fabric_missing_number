@@ -34,7 +34,6 @@ end
 
 def nth_missing_number(arr, nth)
   set = arr.to_set
-  max_val = arr.max
   current = 1
   missing_count = 0
 

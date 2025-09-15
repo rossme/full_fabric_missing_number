@@ -30,7 +30,7 @@ The method should be efficient enough to handle very large arrays.
 To benchmark the performance, execute the following command in the console:
 
 ```shell
-  ruby benchmark/missing_number_benchmark.rb
+  ruby benchmark/find_missing_number_benchmark.rb
 ````
 
 
@@ -39,7 +39,7 @@ To benchmark the performance, execute the following command in the console:
 ```ruby
 find_missing_number([1, 2, 3, 4, 6]) #=> 5
 find_missing_number([1, 2, 3, 4, 6], nth: 2) #=> 7
-find_missing_number([2, 3, 4, 6], nth: 23) #=> nil
+find_missing_number([2, 3, 4, 6], nth: 23) #=> 27
 find_missing_number([1, 2, 3, 4, 5]) #=> nil
 find_missing_number([]) #=> nil
 ```

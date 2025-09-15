@@ -46,6 +46,7 @@ describe "find_missing_number" do
   context "when nth exceeds the number of missing numbers within the array range" do
     it "returns the nth missing number beyond the current array" do
       expect(find_missing_number([1, 2, 3], nth: 12)).to eq(15)
+      expect(find_missing_number([2, 3, 4, 6], nth: 23)).to eq(27)
     end
   end
 end
